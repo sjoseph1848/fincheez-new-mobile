@@ -20,8 +20,8 @@ export class StocksService {
       );
   }
 
-  getAllStocks(): Observable<SymbolsList[]> {
-    return this.http.get<SymbolsList[]>(this.API);
+  getAllStocks(): Observable<Stock[]> {
+    return this.http.get<Stock[]>(this.API);
 }
   
 }

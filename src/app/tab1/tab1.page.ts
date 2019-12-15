@@ -11,7 +11,7 @@ import { StocksService } from '../stocks.service';
 export class Tab1Page implements OnInit {
   errorMessage = '';
   test;
-  stocks: SymbolsList[] = [];
+  stocks: Stock[] = [];
   sub: Subscription;
 
   constructor(private stockService: StocksService) {}
@@ -19,7 +19,7 @@ export class Tab1Page implements OnInit {
   ngOnInit(): void {
     this.sub = this.stockService.getAllStocks()
       .subscribe(
-        (stocks: SymbolsList[]) => this.stocks = stocks.symbolsList);
+        (stocks: any) => this.stocks = stocks.symbolsList);
   }
 
     

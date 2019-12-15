@@ -20,10 +20,8 @@
 //     sector: string;
 //     image: string;
 //   }
-
-
   export interface Stock {
-      symbolsList: SymbolsList[];
+      symbolsList?: any[];
     }
 
   export interface SymbolsList {
@@ -31,3 +29,4 @@
     name: string;
     price: number;
     }
+
